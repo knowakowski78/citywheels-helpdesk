@@ -1,0 +1,109 @@
+[
+  {
+    "question": "Chcę anulować rezerwację CW-1002 teraz. Ile łącznie dostanę z depozytem?",
+    "answer": "Rezerwacja CW-1002, wycena na 2026-06-10T09:00:00+02:00. Można anulować tę rezerwację.\nZwrot za wynajem: 40.00 EUR. Zwrot depozytu: 300.00 EUR. Łącznie: 340.00 EUR. Opłata rezerwacyjna nie podlega zwrotowi (zwrot: 0.00 EUR).\nSposób zwrotu: Na pierwotną kartę w ciągu 5 dni roboczych.\nTo tylko wycena; rezerwacja nie została anulowana. Wyjątek pogodowy wymaga decyzji obsługi. Źródło: data/policies/cancellations.md. Contact CityWheels staff: help@citywheels.example, +48 000 000 000.",
+    "trace": [
+      {
+        "tool": "calculate_refund",
+        "arguments": {
+          "booking_id": "CW-1002"
+        },
+        "result": {
+          "found": true,
+          "booking_id": "CW-1002",
+          "can_cancel": true,
+          "status": "confirmed",
+          "as_of": "2026-06-10T09:00:00+02:00",
+          "hours_before_start": 33.0,
+          "rental_refund_percent": 50,
+          "rental_refund_eur": "40.00",
+          "deposit_refund_eur": "300.00",
+          "booking_fee_refund_eur": "0.00",
+          "total_refund_eur": "340.00",
+          "refund_method": "original card within 5 working days",
+          "reason": "Standard cancellation rules applied.",
+          "source": "data/policies/cancellations.md",
+          "note": "Quote only; no booking is changed. Storm-warning exceptions require staff approval.",
+          "contact": "Contact CityWheels staff: help@citywheels.example, +48 000 000 000."
+        }
+      }
+    ],
+    "seconds": 24.95
+  },
+  {
+    "question": "W jakich godzinach jesteście otwarci w sobotę w czerwcu?",
+    "answer": "Fragmenty regulaminu CityWheels — data/policies/faq.md:\n\n## When are you open?\n\n- April to October: every day, 08:00–20:00.\n- November to March: Monday to Saturday, 09:00–17:00. Closed on Sundays.\n- Closed on 25 and 26 December and on 1 January.\n\nBikes can only be picked up and returned while the shop is open.\n\nContact CityWheels staff: help@citywheels.example, +48 000 000 000.",
+    "trace": [
+      {
+        "tool": "search_policies",
+        "arguments": {
+          "query": "Saturday, June"
+        },
+        "result": {
+          "found": true,
+          "matches": [
+            {
+              "source": "data/policies/faq.md",
+              "text": "# Frequently asked questions\n\n## When are you open?\n\n- April to October: every day, 08:00–20:00.\n- November to March: Monday to Saturday, 09:00–17:00. Closed on Sundays.\n- Closed on 25 and 26 December and on 1 January.\n\nBikes can only be picked up and returned while the shop is open.\n\n## Where are you?\n\nAt the main entrance of the Riverside Park, next to the tram stop \"Park Nadrzeczny\".\n\n## What do I need to rent a bike?\n\nAn ID card or a passport, and a payment card or a voucher for the deposit. We do not take deposits in cash.\n\n## How can I pay?\n\nBy card or with a CityWheels voucher, online or in the shop. In the shop you can also pay the rental in cash, but not the deposit.\n\n## Are there age limits?\n\n- Kids bikes: for children from 6 to 12 years old, rented by a parent or guardian.\n- City bikes: from 13 years old. Riders under 18 need a parent or guardian to sign the rental.\n- Electric bikes: from 16 years old. Riders under 18 need a parent or guardian to sign the rental.\n\n## Do I have to wear a helmet?\n\nHelmets are free and we recommend them for everyone. They are required for riders under 16.\n\n## Can I take my dog?\n\nDogs are not allowed in bike baskets or child seats.\n\n## Can I take the bike on a train or outside the city?\n\nYes, inside the country. Taking a bike abroad is not allowed.\n\n## What if the bike breaks or I have an accident?\n\nStop riding, make sure you are safe, and call the staff at +48 000 000 000. Do not try to repair an electric bike yourself.\n\n## What if the bike is stolen or lost?\n\nReport it to the police and call the staff at once. The staff decide about the deposit after reading the police report.\n\n## Do you sell bikes?\n\nNo. We only rent bikes.\n",
+              "score": 4
+            },
+            {
+              "source": "data/policies/cancellations.md",
+              "text": "# Cancellations and refunds\n\n## Cancelling a booking\n\nA customer can cancel a booking with the status `confirmed`. How much of the rental price comes back depends on how long before the start of the rental the booking is cancelled:\n\n| Cancelled | Refund of the rental price |\n| --- | --- |\n| 48 hours or more before the start | 100% |\n| Less than 48 hours, but 24 hours or more before the start | 50% |\n| Less than 24 hours before the start | 0% |\n\n- The booking fee is never refunded.\n- The deposit is always refunded in full when a booking is cancelled.\n- Bookings with the status `in_progress`, `completed` or `cancelled` cannot be cancelled, and nothing is refunded for them.\n\n## How the money comes back\n\n- Bookings paid by card are refunded to the same card within 5 working days.\n- Bookings paid with a voucher are refunded as a new voucher of the same value, never as money. The deposit is refunded the same way it was paid.\n\n## Changing a booking\n\nThe dates or the bike type of a `confirmed` booking can be changed for free up to 24 hours before the start, if bikes are available. Later changes are not possible: the customer has to cancel and book again.\n\n## Bad weather\n\nIf the weather service issues a storm warning for the day of the rental, the customer may get a full refund. The staff decide each case. Customers have to contact the staff for this.\n\n## Contact the staff\n\n- Email: help@citywheels.example\n- Phone: +48 000 000 000, every day while the shop is open\n",
+              "score": 1
+            }
+          ],
+          "contact": "Contact CityWheels staff: help@citywheels.example, +48 000 000 000."
+        }
+      }
+    ],
+    "seconds": 20.22
+  },
+  {
+    "question": "Jaka jest stolica Australii?",
+    "answer": "Nie mogę odpowiedzieć bez potwierdzenia w danych CityWheels. Jeśli pytanie dotyczy rezerwacji, podaj jej numer. Contact CityWheels staff: help@citywheels.example, +48 000 000 000.",
+    "trace": [],
+    "seconds": 12.08
+  },
+  {
+    "question": "How much is my cancellation refund?",
+    "answer": "I cannot answer without verified CityWheels data. If this concerns a booking, please provide its booking ID. Contact CityWheels staff: help@citywheels.example, +48 000 000 000.",
+    "trace": [],
+    "seconds": 10.05
+  },
+  {
+    "question": "What if I cancel CW-1002 tomorrow instead of now?",
+    "answer": "I cannot answer without verified CityWheels data. If this concerns a booking, please provide its booking ID. Contact CityWheels staff: help@citywheels.example, +48 000 000 000.",
+    "trace": [],
+    "seconds": 18.67
+  },
+  {
+    "question": "Show booking CW-1001 details.",
+    "answer": "Booking details from data/bookings.json:\n{\n  \"id\": \"CW-1001\",\n  \"status\": \"confirmed\",\n  \"bike_type\": \"city\",\n  \"bikes\": 1,\n  \"start\": \"2026-06-13T10:00:00+02:00\",\n  \"end\": \"2026-06-15T10:00:00+02:00\",\n  \"add_ons\": [],\n  \"rental_price_eur\": 40.0,\n  \"booking_fee_eur\": 2.0,\n  \"deposit_eur\": 50.0,\n  \"paid_with\": \"card\"\n}",
+    "trace": [
+      {
+        "tool": "get_booking",
+        "arguments": {
+          "booking_id": "CW-1001"
+        },
+        "result": {
+          "found": true,
+          "booking": {
+            "id": "CW-1001",
+            "status": "confirmed",
+            "bike_type": "city",
+            "bikes": 1,
+            "start": "2026-06-13T10:00:00+02:00",
+            "end": "2026-06-15T10:00:00+02:00",
+            "add_ons": [],
+            "rental_price_eur": 40.0,
+            "booking_fee_eur": 2.0,
+            "deposit_eur": 50.0,
+            "paid_with": "card"
+          }
+        }
+      }
+    ],
+    "seconds": 18.69
+  }
+]

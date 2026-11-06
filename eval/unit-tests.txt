@@ -1,0 +1,43 @@
+test_booking_id_must_match_a_complete_supplied_id (test_agent.AgentTests.test_booking_id_must_match_a_complete_supplied_id) ... ok
+test_empty_answer_is_a_safe_referral (test_agent.AgentTests.test_empty_answer_is_a_safe_referral) ... ok
+test_empty_or_malformed_model_output_is_error (test_agent.AgentTests.test_empty_or_malformed_model_output_is_error) ... ok
+test_invalid_calls_return_errors_instead_of_crashing (test_agent.AgentTests.test_invalid_calls_return_errors_instead_of_crashing) ... ok
+test_known_booking_details_are_rendered_from_data (test_agent.AgentTests.test_known_booking_details_are_rendered_from_data) ... ok
+test_model_cannot_lookup_a_booking_id_not_supplied_by_customer (test_agent.AgentTests.test_model_cannot_lookup_a_booking_id_not_supplied_by_customer) ... ok
+test_multiple_calls_in_one_turn_and_string_json_arguments (test_agent.AgentTests.test_multiple_calls_in_one_turn_and_string_json_arguments) ... ok
+test_multiple_rounds_feed_real_results_to_model (test_agent.AgentTests.test_multiple_rounds_feed_real_results_to_model) ... ok
+test_questions_do_not_share_history (test_agent.AgentTests.test_questions_do_not_share_history) ... ok
+test_refund_prose_cannot_override_tool_amount_or_payment_method (test_agent.AgentTests.test_refund_prose_cannot_override_tool_amount_or_payment_method) ... ok
+test_tool_loop_has_bound (test_agent.AgentTests.test_tool_loop_has_bound) ... ok
+test_truncated_output_after_lookup_still_returns_verified_not_found (test_agent.AgentTests.test_truncated_output_after_lookup_still_returns_verified_not_found) ... ok
+test_unguarded_general_knowledge_is_replaced_with_referral (test_agent.AgentTests.test_unguarded_general_knowledge_is_replaced_with_referral) ... ok
+test_unknown_booking_cannot_be_overridden_by_generated_prose (test_agent.AgentTests.test_unknown_booking_cannot_be_overridden_by_generated_prose) ... ok
+test_wrong_policy_interpretation_is_replaced_with_source_excerpt (test_agent.AgentTests.test_wrong_policy_interpretation_is_replaced_with_source_excerpt) ... ok
+test_correct_text_without_tool_does_not_pass_refund (test_eval.EvalTests.test_correct_text_without_tool_does_not_pass_refund) ... ok
+test_forbidden_general_knowledge_is_caught (test_eval.EvalTests.test_forbidden_general_knowledge_is_caught) ... ok
+test_refund_for_wrong_booking_is_rejected (test_eval.EvalTests.test_refund_for_wrong_booking_is_rejected) ... ok
+test_valid_answer_and_trace_pass (test_eval.EvalTests.test_valid_answer_and_trace_pass) ... ok
+test_zero_check_does_not_accept_digits_in_booking_id_or_other_amounts (test_eval.EvalTests.test_zero_check_does_not_accept_digits_in_booking_id_or_other_amounts) ... ok
+test_http_contract (test_model.ModelTests.test_http_contract) ... ok
+test_invalid_gpu_setting_has_clear_error (test_model.ModelTests.test_invalid_gpu_setting_has_clear_error) ... ok
+test_invalid_json_and_missing_message (test_model.ModelTests.test_invalid_json_and_missing_message) ... ok
+test_network_errors_have_safe_messages (test_model.ModelTests.test_network_errors_have_safe_messages) ... ok
+test_truncated_response_is_not_accepted_as_complete (test_model.ModelTests.test_truncated_response_is_not_accepted_as_complete) ... ok
+test_booking_lookup_normalizes_id (test_tools.ToolTests.test_booking_lookup_normalizes_id) ... ok
+test_calculation_is_read_only (test_tools.ToolTests.test_calculation_is_read_only) ... ok
+test_decimal_rounding (test_tools.ToolTests.test_decimal_rounding) ... ok
+test_dispatch_rejects_bad_arguments (test_tools.ToolTests.test_dispatch_rejects_bad_arguments) ... ok
+test_known_refunds (test_tools.ToolTests.test_known_refunds) ... ok
+test_missing_booking (test_tools.ToolTests.test_missing_booking) ... ok
+test_nonconfirmed_statuses_refund_nothing_including_deposit (test_tools.ToolTests.test_nonconfirmed_statuses_refund_nothing_including_deposit) ... ok
+test_opening_hours_rank_above_cancellation_time_limits (test_tools.ToolTests.test_opening_hours_rank_above_cancellation_time_limits) ... ok
+test_policy_no_match_and_empty (test_tools.ToolTests.test_policy_no_match_and_empty) ... ok
+test_policy_sources_and_exceptions (test_tools.ToolTests.test_policy_sources_and_exceptions) ... ok
+test_thresholds_to_the_second (test_tools.ToolTests.test_thresholds_to_the_second) ... ok
+test_timezone_offsets_represent_same_instant (test_tools.ToolTests.test_timezone_offsets_represent_same_instant) ... ok
+test_voucher_and_card_methods (test_tools.ToolTests.test_voucher_and_card_methods) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 0.126s
+
+OK

@@ -1,0 +1,67 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CityWheels: agent CLI",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "citywheels",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "CityWheels: unit tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": [
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "CityWheels: Groq API backup (explicit)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "citywheels",
+      "args": [
+        "--provider",
+        "groq"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env.groq"
+    },
+    {
+      "name": "CityWheels: local 8B fast",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "citywheels",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "OLLAMA_NUM_GPU": "-1",
+        "OLLAMA_MODEL": "qwen3:8b",
+        "OLLAMA_THINK": "false"
+      }
+    },
+    {
+      "name": "CityWheels: small local 0.6B (optional)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "citywheels",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "OLLAMA_MODEL": "qwen3:0.6b",
+        "OLLAMA_NUM_GPU": "0",
+        "OLLAMA_THINK": "true"
+      }
+    }
+  ]
+}
